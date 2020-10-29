@@ -22,25 +22,25 @@ public class NumberWithard : MonoBehaviour
 
     public void OnPressHeigher()
     {
-        min = guess;
-        ToCountGuess();
+        min = guess + 1;
+        NextGuess();
     }
 
     public void OnPressLower()
     {
-        max = guess;
-        ToCountGuess();
+        max = guess - 1;
+        NextGuess();
     }
 
-    private void ToCountGuess()
+    private void NextGuess()
     {
-        guess = (max + min) / 2;
+        //guess = (max + min) / 2;
+        guess = Random.Range(min, max);
         guessText.text = guess.ToString();
     }
 
     private void StartGame()
     {
-        ToCountGuess();
-        max += 1;
+        NextGuess();
     }
 }
