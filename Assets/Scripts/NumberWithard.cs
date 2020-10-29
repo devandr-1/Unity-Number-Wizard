@@ -10,7 +10,7 @@ public class NumberWithard : MonoBehaviour
     [SerializeField]
     int min;
     [SerializeField]
-    TextMeshProUGUI guessText;
+    TextMeshProUGUI guessText = null;
 
     private int guess;
 
